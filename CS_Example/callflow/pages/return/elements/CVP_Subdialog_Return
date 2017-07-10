@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@1043557763:1499719378035" name="CVP_Subdialog_Return" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">{Data.Session.userid}|{Data.session.mobile}|{Data.Session.openmrs_id}|{Data.Session.demo_id}</setting>
+<setting name="FromExtVXML0">{Data.Session.first_name} {Data.Session.last_name}|{Data.Session.customer_language}</setting>
+<setting name="FromExtVXML1">{Data.Session.city}, {Data.Session.state} {Data.Session.zip} {Data.Session.country}</setting>
+<setting name="FromExtVXML2">{Data.Session.pod_id}</setting>
+<setting name="FromExtVXML3">{Data.Session.customer_id}</setting>
+</settings>
+</config>
+</subdialog_return>

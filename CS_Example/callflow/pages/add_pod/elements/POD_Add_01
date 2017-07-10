@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@190311276:1494963039304" name="POD_Add_01" version="6.0.1">
+<config>
+<settings>
+<setting name="customerId">{Data.Session.customer_id}</setting>
+<setting name="tags">voice, IVR</setting>
+<setting name="fieldsets">cisco.base.pod</setting>
+<setting name="Context_Notes">Customer called voice IVR</setting>
+</settings>
+<session_data>
+<data create_when="After" name="pod_id">{Data.Element.POD_Add_01.pod_id}</data>
+</session_data>
+<local_events>
+<local_event>
+<name>Any</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1471679577:1486140365370" name="CS_customer_lookup" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="first_name">{Data.Session.first_name}</data>
+<data create_when="After" name="last_name">{Data.Session.last_name}</data>
+</log>
+<settings>
+<setting name="QueryParameters">'Context_Home_Phone':'{CallData.ANI}','Context_Mobile_Phone':'{CallData.ANI}','Context_Work_Phone':'{CallData.ANI}'</setting>
+<setting name="Operator">AND</setting>
+<setting name="timeoutRetries">1</setting>
+</settings>
+<session_data>
+<data create_when="After" name="customer_id">{Data.Element.CS_customer_lookup.customer_id}</data>
+<data create_when="After" name="openmrs_id">{Data.Element.CS_customer_lookup.Context_OpenMRS_Account_Number}</data>
+<data create_when="After" name="userid">{Data.Element.CS_customer_lookup.Context_Customer_External_ID}</data>
+<data create_when="After" name="first_name">{Data.Element.CS_customer_lookup.Context_First_Name}</data>
+<data create_when="After" name="last_name">{Data.Element.CS_customer_lookup.Context_Last_Name}</data>
+<data create_when="After" name="customer_language">{Data.Element.CS_customer_lookup.Context_Preferred_Language}</data>
+<data create_when="After" name="mobile">{Data.Element.CS_customer_lookup.Context_Mobile_Phone}</data>
+<data create_when="After" name="city">{Data.Element.CS_customer_lookup.Context_City}</data>
+<data create_when="After" name="state">{Data.Element.CS_customer_lookup.Context_State}</data>
+<data create_when="After" name="country">{Data.Element.CS_customer_lookup.Context_Country}</data>
+<data create_when="After" name="zip">{Data.Element.CS_customer_lookup.Context_ZIP}</data>
+<data create_when="After" name="customer_count">{Data.Element.CS_customer_lookup.customer_count}</data>
+</session_data>
+<local_events>
+<local_event>
+<name>CS_API_Exception</name>
+<eventlist>com.cisco.thunderhead.errors.ApiException</eventlist>
+<type>Java Exception</type>
+</local_event>
+<local_event>
+<name>General_Exception</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

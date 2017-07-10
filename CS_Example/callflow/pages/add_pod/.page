@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@101674760:1494962990080" name="add_pod" version="6.0.1">
+<element height="46" id="Element@1598191955:1494962990080" name="Add POD" type="Page Entry" width="99" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@190311276:1494963039304"/>
+</exit_states>
+</element>
+<element height="46" id="Element@190311276:1494963039304" name="POD_Add_01" src="com.audium.server.action.contextservice.AddPodAction" type="Action Element" width="118" x="289" y="132">
+<exit_states>
+<exit_state name="done" target="Element@118916540:1499719514072"/>
+<exit_state name="Java Exception-Any" target="Element@118916540:1499719514072">
+<bendpoint>
+<dim1 x="145" y="61"/>
+<dim2 x="143" y="-38"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@118916540:1499719514072" name="Return" type="Page Connector" width="118" x="290" y="243">
+<page_connector target="Element@1904503879:1491276158448">Return<config/>
+</page_connector>
+</element>
+</page>
